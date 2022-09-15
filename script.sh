@@ -6,7 +6,7 @@
 f="$#"
 for element in "$@"; do
   
-  if [ -d "$element" ]; then
+  if [ -d "$element" ] || [ "--" == "$element"* ]; then
     rsync -av --delete $element/ /media/saulo/saulo
   else 
     echo "Error, $element não é um subdiretório do diretório atual"
