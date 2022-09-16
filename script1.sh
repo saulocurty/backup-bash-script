@@ -17,7 +17,7 @@ for element in "$@"; do
   
 
 done
-rsync -av $string $dest --delete
+rsync -avb $string $dest --backup-dir="$(pwd)/backup" --delete
 echo "string é = $string"
 
 
