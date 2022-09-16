@@ -11,7 +11,7 @@ for element in "$@"; do
     string+=" $element/"
     continue
   else 
-    echo "Error, $element não é um subdiretório do diretório atual ou não é uma flag válida"
+    echo "Error, $element não é um subdiretório do diretório atual"
     exit 2
   fi
   
